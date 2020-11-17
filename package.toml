@@ -2,9 +2,9 @@
 uri = "buildpacks/order"
 
 [[dependencies]]
-uri = "../hello-buildpacks/buildpacks"
+image = "ghcr.io/mattmoor/hello-buildpacks:v0.0.3"
 # Alternately:
-# image = "docker.io/username/hello-buildpacks:latest"
+# uri = "../hello-buildpacks/buildpacks"
 
 [[dependencies]]
 uri = "buildpacks/dependent"
