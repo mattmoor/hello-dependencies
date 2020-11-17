@@ -14,7 +14,9 @@ pack package-buildpack my-buildpack --config ./package.toml
 # Use this buildpack
 
 ```shell
-pack build blah --buildpack my-buildpack
+# This uses the v0.0.1 release, to use a locally build image (e.g. my-buildpack)
+# replace the ghcr.io reference below.
+pack build blah --buildpack ghcr.io/mattmoor/hello-dependencies:v0.0.1
 ```
 
 # Sample output
