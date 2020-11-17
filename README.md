@@ -26,62 +26,75 @@ hello-dependent  0.0.1
 ===> ANALYZING
 ===> RESTORING
 ===> BUILDING
----> Buildpack Template
-     platform_dir files:
-       /platform:
-       total 12
-       drwxr-xr-x 1 root root 4096 Jan  1  1980 .
-       drwxr-xr-x 1 root root 4096 Nov 17 00:19 ..
-       drwxr-xr-x 1 root root 4096 Jan  1  1980 env
-
-       /platform/env:
-       total 8
-       drwxr-xr-x 1 root root 4096 Jan  1  1980 .
-       drwxr-xr-x 1 root root 4096 Jan  1  1980 ..
-     env_dir: /platform/env
-     env vars:
-       declare -x CNB_BUILDPACK_DIR="/cnb/buildpacks/hello-buildpacks/0.0.1"
-       declare -x CNB_STACK_ID="io.buildpacks.stacks.bionic"
-       declare -x HOME="/home/cnb"
-       declare -x HOSTNAME="6a299ff04561"
-       declare -x OLDPWD
-       declare -x PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-       declare -x PWD="/workspace"
-       declare -x SHLVL="1"
-     layers_dir: /layers/hello-buildpacks
-     plan_path: /tmp/plan.568148337/hello-buildpacks/plan.toml
-     plan contents:
-       [[entries]]
-         name = "some-thing"
-
----> Done
 ---> Buildpack (dependent) Template
      platform_dir files:
        /platform:
        total 12
-       drwxr-xr-x 1 root root 4096 Jan  1  1980 .
-       drwxr-xr-x 1 root root 4096 Nov 17 00:19 ..
-       drwxr-xr-x 1 root root 4096 Jan  1  1980 env
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 .
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 ..
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 env
 
        /platform/env:
-       total 8
-       drwxr-xr-x 1 root root 4096 Jan  1  1980 .
-       drwxr-xr-x 1 root root 4096 Jan  1  1980 ..
+       total 20
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 .
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 ..
+       -rw-r--r-- 1 root root    4 Jan  1  1980 VAR1
+       -rw-r--r-- 1 root root    4 Jan  1  1980 VAR2
+       -rw-r--r-- 1 root root    4 Jan  1  1980 VAR3
      env_dir: /platform/env
      env vars:
-       declare -x CNB_BUILDPACK_DIR="/cnb/buildpacks/hello-dependent/0.0.1"
-       declare -x CNB_STACK_ID="io.buildpacks.stacks.bionic"
-       declare -x HOME="/home/cnb"
-       declare -x HOSTNAME="6a299ff04561"
-       declare -x OLDPWD
-       declare -x PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-       declare -x PWD="/workspace"
-       declare -x SHLVL="1"
+       HOSTNAME=b45dca7b365d
+       CNB_STACK_ID=io.buildpacks.stacks.bionic
+       PWD=/workspace
+       HOME=/home/cnb
+       CNB_BUILDPACK_DIR=/cnb/buildpacks/hello-dependent/0.0.1
+       VAR1=val1
+       VAR3=val3
+       VAR2=val2
+       SHLVL=1
+       PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+       _=/usr/bin/env
      layers_dir: /layers/hello-dependent
-     plan_path: /tmp/plan.568148337/hello-dependent/plan.toml
+     plan_path: /tmp/plan.793582662/hello-dependent/plan.toml
      plan contents:
        [[entries]]
          name = "some-other-thing"
+
+---> Done
+---> Buildpack Template
+     platform_dir files:
+       /platform:
+       total 12
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 .
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 ..
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 env
+
+       /platform/env:
+       total 20
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 .
+       drwxr-xr-x 1 root root 4096 Nov 17 06:04 ..
+       -rw-r--r-- 1 root root    4 Jan  1  1980 VAR1
+       -rw-r--r-- 1 root root    4 Jan  1  1980 VAR2
+       -rw-r--r-- 1 root root    4 Jan  1  1980 VAR3
+     env_dir: /platform/env
+     env vars:
+       HOSTNAME=b45dca7b365d
+       CNB_STACK_ID=io.buildpacks.stacks.bionic
+       PWD=/workspace
+       HOME=/home/cnb
+       CNB_BUILDPACK_DIR=/cnb/buildpacks/hello-buildpacks/0.0.1
+       VAR1=val1
+       VAR3=val3
+       VAR2=val2
+       SHLVL=1
+       PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+       BAR=foo
+       _=/usr/bin/env
+     layers_dir: /layers/hello-buildpacks
+     plan_path: /tmp/plan.793582662/hello-buildpacks/plan.toml
+     plan contents:
+       [[entries]]
+         name = "some-thing"
 
 ---> Done
 ===> EXPORTING

@@ -9,12 +9,13 @@ name = "Buildpack (order) Template"
 homepage = "https://github.com/mattmoor/hello-dependencies"
 
 [[order]]
-[[order.group]]
-id = "hello-buildpacks"
-version = "0.0.1"
-optional = false
 
 [[order.group]]
 id = "hello-dependent"
 version = "0.0.1"
-optional = false
+optional = true
+
+[[order.group]]
+id = "hello-buildpacks"
+version = "0.0.1"
+optional = true
