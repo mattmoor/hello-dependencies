@@ -3,10 +3,10 @@ api = "0.2"
 
 # Buildpack ID and metadata
 [buildpack]
-id = "hello-buildpacks"
+id = "hello-dependent"
 version = "0.0.1"
-name = "Buildpack Template"
-homepage = "https://github.com/mattmoor/hello-buildpacks"
+name = "Buildpack (dependent) Template"
+homepage = "https://github.com/mattmoor/hello-dependencies"
 
 # Stacks that the buildpack will work with
 [[stacks]]

@@ -11,7 +11,7 @@ cat >> "${plan_path}" <<EOL
 # NOTE: The dependency is provided during the 'build' process.
 #
 [[provides]]
-name = "some-thing"
+name = "some-other-thing"
 
 # Buildpack requires this dependency
 #
@@ -19,5 +19,5 @@ name = "some-thing"
 #       the dependency.
 #
 [[requires]]
-name = "some-thing"
+name = "some-other-thing"
 EOL

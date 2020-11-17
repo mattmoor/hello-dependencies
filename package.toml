@@ -1,8 +1,10 @@
 [buildpack]
-uri = "buildpacks/"
+uri = "buildpacks/order"
 
-# [[dependencies]]
-# uri = "samples/buildpacks/hello-moon"
+[[dependencies]]
+uri = "../hello-buildpacks/buildpacks"
+# Alternately:
+# image = "docker.io/username/hello-buildpacks:latest"
 
-# [[dependencies]]
-# image = "cnbs/sample-package:hello-world"
+[[dependencies]]
+uri = "buildpacks/dependent"

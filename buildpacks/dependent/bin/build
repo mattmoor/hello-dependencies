@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-echo "---> Buildpack Template"
+echo "---> Buildpack (dependent) Template"
 
 # INPUT ARGUMENTS
 layers_dir="$1"
